@@ -1,12 +1,12 @@
 Querying the Pokédex
 
-This is one of my database labs where I got to work with a **Pokédex database** and practice SQL queries with PHP. It was a fun way to combine Pokémon knowledge with real-world database skills! This lab contributes **10%** to the overall grade.  
+This is one of my database project where I got to work with a **Pokédex database** and practice SQL queries with PHP. 
 
 ---
 
 ## About the Project
 
-In this lab, I worked with a **Pokédex**, which is basically a database of Pokémon species. Each Pokémon has unique stats, types, and characteristics. My goal was to **create the database table, populate it, and write PHP scripts to answer specific queries** about the Pokémon.  
+In this project, I worked with a **Pokédex**, which is basically a database of Pokémon species. Each Pokémon has unique stats, types, and characteristics. My goal was to **create the database table, populate it, and write PHP scripts to answer specific queries** about the Pokémon.  
 
 I also got to practice using `INSERT`, `UPDATE`, `DELETE`, and `SELECT` queries while making sure the results display nicely on a web page.  
 
