@@ -1,0 +1,2 @@
+INSERT INTO pokedex (pokemon_name, type_1, type_2, hp, attack, defense, speed, special_attack, special_defense, generation, legendary) 
+VALUES ('Sprigatito', 'Grass', NULL, 40, 61, 54, 65, 45, 45, 9, false),
