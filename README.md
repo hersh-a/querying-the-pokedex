@@ -1,143 +1,56 @@
-# Lab 03: 
+Querying the Pokédex
 
-This Lab is worth 10% of your overall grade.
-
-Please see Moodle for submission details and the final due date.
+This is one of my database labs where I got to work with a **Pokédex database** and practice SQL queries with PHP. It was a fun way to combine Pokémon knowledge with real-world database skills! This lab contributes **10%** to the overall grade.  
 
 ---
 
-## Querying the Pokédex
+## About the Project
 
-Pokémon refers to the fictional creatures (like animals) that inhabit the Pokémon world. Each Pokémon has unique abilities, characteristics, and types. In this universe, the Pokédex works as a comprehensive database that records information about each Pokémon species.
+In this lab, I worked with a **Pokédex**, which is basically a database of Pokémon species. Each Pokémon has unique stats, types, and characteristics. My goal was to **create the database table, populate it, and write PHP scripts to answer specific queries** about the Pokémon.  
 
+I also got to practice using `INSERT`, `UPDATE`, `DELETE`, and `SELECT` queries while making sure the results display nicely on a web page.  
 
-## Setting up the Table
-
-You have been given a partial Pokédex with a total of 928 entries in `init.sql`. 
-
-Study the name of each column, what data type each column should be, the maximum length of each column, and whether or not the column can be a `NULL` value. Keep in mind that you will also need a `PRIMARY KEY` for this table.
-
-When you are ready, finish the `CREATE TABLE` statement and run it in PHPMyAdmin. Make sure that you save this statement in the `init.sql`, as you will be graded on how you set up this table.
-
-After your table is created, you will be able to run the second part of the script, which will add all of the records you need to complete this Lab.
-
-
-## Your Task
-
-After your table is created and all of the records are loaded in, you will create a PHP document that answers the following questions by performing SQL queries. 
-
-Remember that when you present your answer, it must be properly formatted, easily legible, and make sense to the user. Your answers should either be in the context of a complete sentence, a list, or an HTML table with headings. 
-
-
-### Questions
-
-1. What is the total number of Pokémon currently in the Pokédex?
-
-2. Which Pokémon has the highest Attack stat amongst Legendary Pokémon? Which one has the highest Attack stat amongst non-Legendary Pokémon?
-
-    Hint: Do this with two queries.
-
-3. How many Pokémon are exclusively "Fire" types?
-    
-4. What are the names and attack stats of all the Legendary Pokémon in Generation 7?
-    
-5. What is the average defense stat of all the Pokémon?
-
-6. What are the names and types of all of the non-Legendary Pokémon with a speed greater than 120?
-    
-7. Which five (5) Pokémon have the highest HP (Hit Points) amongst all 'Water' types?
-    
-8. What is the total number of Pokémon in each generation?
-
-9. What are the names of Pokémon that have both "Ghost" and "Fairy" as their types?
-
-10. What is the average HP, attack, and defense stats of the Pokémon belonging to the "Grass" type?
-
-11. Insert a new Pokémon into the Pokédex with the following details: 
-        
-        Name: Sprigatito
-        Type: Grass
-        HP: 40
-        Attack: 61
-        Defense: 54
-        Speed: 65
-        Sp. Atk: 45
-        Sp. Def: 45
-        Generation: 9
-        Legendary: No
-
-    Retrieve the record for Sprigatito and display it to the user.
-
-12. Increment Sprigatito speed stat by 10 and display the updated entry to the user.
-
-13. Delete Sprigatito from the Pokédex and try to display it to the user.
 ---
 
-## Hints
+## Setting Up the Table
 
-If you are unfamiliar with the Pokémon franchise and the terminology used in this table, do not fret! This section will go a little deeper into explaining each column.
+I started with a **partial Pokédex table (`init.sql`)** that included 928 Pokémon entries. My task was to:  
 
+1. Review the column names and data types.  
+2. Decide which columns can be `NULL`.  
+3. Add a `PRIMARY KEY` to the table.  
+4. Finish the `CREATE TABLE` statement and run it in PHPMyAdmin.  
 
-### Types
+Once the table was created, I ran the second part of the script to **populate the table with all the Pokémon records**.  
 
-Pokémon can have either one or two different types. All of the types are as follows:
+---
 
-1. Normal
-2. Fire
-3. Water
-4. Electric
-5. Grass
-6. Ice
-7. Fighting
-8. Poison
-9. Ground
-10. Flying
-11. Psychic
-12. Bug
-13. Rock
-14. Ghost
-15. Dragon
-16. Dark
-17. Steel
-18. Fairy
+## What I Did in PHP
 
-If a Pokémon has only one type, then its second type will be `NULL`.
+After the table was ready, I created a PHP file to answer several queries. I made sure that all results were **legible and easy to understand**, either in complete sentences or nicely formatted HTML tables.  
 
+Here are the tasks I completed:
 
-### Battle Stats
+1. Counted the total number of Pokémon in the Pokédex.  
+2. Found the Pokémon with the **highest Attack stat** for Legendary and non-Legendary Pokémon.  
+3. Counted Pokémon that are exclusively **Fire type**.  
+4. Listed the **Legendary Pokémon in Generation 7** along with their attack stats.  
+5. Calculated the **average Defense stat** for all Pokémon.  
+6. Listed non-Legendary Pokémon with **Speed > 120** along with their types.  
+7. Found the top 5 **Water-type Pokémon by HP**.  
+8. Counted Pokémon in each **generation**.  
+9. Found Pokémon that are **both Ghost and Fairy type**.  
+10. Calculated **average HP, Attack, and Defense** for Grass-type Pokémon.  
+11. **Inserted** a new Pokémon (Sprigatito) and displayed its info.  
+12. **Updated Sprigatito’s Speed** and displayed the updated stats.  
+13. **Deleted Sprigatito** and verified it was removed from the table.  
 
-One of the main features of Pokémon is Pokémon battles. In Pokémon battles, there are several key battle stats that determine a Pokémon's strengths and weaknesses. Here's an explanation of each battle stat:
+---
 
-1. HP (Hit Points): HP represents a Pokémon's health or stamina. It determines how much damage a Pokémon can withstand before fainting. When HP reaches zero, the Pokémon faints and is unable to battle.
+## Notes on Pokémon Data
 
-2. Attack: Attack represents a Pokémon's physical strength. It affects the power of the Pokémon's physical moves, such as Tackle or Scratch. Pokémon with high Attack stats deal more damage with physical moves.
+- Pokémon can have **one or two types**. If a Pokémon only has one type, the second type is `NULL`.  
+- Stats include **HP, Attack, Defense, Speed, Special Attack, and Special Defense**.  
+- Each Pokémon belongs to a **Generation** (1–9). Generation 9 Pokémon were added manually in this lab.  
+- **Legendary Pokémon** are rare and powerful, and they usually appear only once per game.  
 
-3. Defense: Defense represents a Pokémon's ability to withstand physical attacks. It reduces the damage taken from the opponent's physical moves. Pokémon with high Defense stats can endure physical attacks better.
-
-4. Speed: Speed represents a Pokémon's quickness or agility. It determines which Pokémon moves first in battle. Pokémon with higher Speed stats are more likely to attack first.
-
-5. Special Attack (Sp. Atk): Special Attack represents a Pokémon's power in special or elemental moves, such as Flamethrower or Thunderbolt. It affects the damage dealt by those moves. Pokémon with high Special Attack stats are stronger in special moves.
-
-6. Special Defense (Sp. Def): Special Defense represents a Pokémon's ability to withstand special attacks. It reduces the damage taken from the opponent's special moves. Pokémon with high Special Defense stats can withstand special attacks better. 
-
-
-### Generation
-
-In Pokémon, a 'Generation' refers to a specific set of Pokémon that was first introduced in a mainline game. A mainline Pokémon game is usually released every 3-4 years, introducing a new region and new Pokémon each time.
-
-Generation 1: Pokémon introduced in 1996 (Games: Red, Blue, Green, Yellow)
-Generation 2: Pokémon introduced in 1999 (Games: Gold, Silver, Crystal)
-Generation 3: Pokémon introduced in 2002 (Games: Ruby, Sapphire, Emerald)
-Generation 4: Pokémon introduced in 2006 (Games: Diamond, Pearl, Platinum)
-Generation 5: Pokémon introduced in 2010 (Games: Black, White)
-Generation 6: Pokémon introduced in 2013 (Games: X, Y)
-Generation 7: Pokémon introduced in 2016 (Games: Sun, Moon)
-Generation 8: Pokémon introduced in 2019 (Games: Sword, Shield)
-Generation 9: Pokémon introduced in 2022 (Games: Scarlet, Violet)
-
-Note that Generation 9 is not included in your dataset.
-
-
-### Legendary
-
-Legendary Pokémon are a special category of Pokémon that are rare and powerful. These legendary creatures often play significant roles in the Pokémon storyline and can appear only once per game.
