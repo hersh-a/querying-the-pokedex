@@ -52,5 +52,7 @@ Here are the tasks I completed:
 - Pokémon can have **one or two types**. If a Pokémon only has one type, the second type is `NULL`.  
 - Stats include **HP, Attack, Defense, Speed, Special Attack, and Special Defense**.  
 - Each Pokémon belongs to a **Generation** (1–9). Generation 9 Pokémon were added manually in this lab.  
-- **Legendary Pokémon** are rare and powerful, and they usually appear only once per game.  
+- **Legendary Pokémon** are rare and powerful, and they usually appear only once per game.
+
+# DEMO WEBSITE : https://hershagustin.com/portfolio/php/querying-pokedex/
 
